@@ -1,0 +1,179 @@
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #11447E, #0e2a5e);
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.header__name {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header__role {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  color: #11447E;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+/* Navigation */
+.nav {
+  background: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav__list li {
+  margin: 0 1rem;
+}
+
+.nav__list a {
+  color: #fff;
+  display: block;
+  padding: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav__list a:hover,
+.nav__list a.active {
+  color: #00aced;
+}
+
+/* Sections */
+.section {
+  padding: 5rem 0;
+}
+
+.section__title {
+  font-size: 2rem;
+  color: #11447E;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #11447E;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section__text {
+  font-size: 1rem;
+  max-width: 800px;
+  margin-top: 1rem;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills__group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.skills__heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.skills__group ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 3px solid #11447E;
+  padding-left: 1.5rem;
+}
+
+.timeline__item {
+  margin-bottom: 2rem;
+}
+
+.timeline__item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline__item span {
+  font-weight: normal;
+  color: #555;
+}
+
+/* List styling */
+.list {
+  list-style: disc inside;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+}
